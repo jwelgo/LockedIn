@@ -1,0 +1,73 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Maven / Gradle build output
+target/
+build/
+.gradle/
+*.jar
+*.war
+*.class
+HELP.md
+!**/*-runner.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Other IDEs (in case of mixed environments)
+.vscode/
+.settings/
+.classpath
+.project
+*.launch
+.factorypath
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.properties
+application-dev.yml
+application-dev.properties
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+spring.log
+
+# DB-related (if scripts live in backend)
+*.sql
+!init.sql
+!schema.sql
+!data.sql
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# OS / misc
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Docs
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# Tests (skip if you run tests inside the image)
+src/test/
+**/*Test.java
+**/*Tests.java
+coverage/

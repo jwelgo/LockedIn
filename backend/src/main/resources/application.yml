@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:54432/workout-tracker
+    username: workout-tracker-user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: workout-tracker-backend
+server:
+  port: 8080
