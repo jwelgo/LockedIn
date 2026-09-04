@@ -1,4 +1,4 @@
-package com.backend.backend;
+package com.backend.backend.Datatypes;
 
 import java.util.Date;
 
@@ -49,7 +49,7 @@ public class Movement {
 
     // Modifiers
     public void addInstance(Date date, Integer sets, Integer reps, Integer weight) {
-        this.progressionHistory.addWorkout(date, sets, reps, weight);
+        this.progressionHistory.addPerformance(date, sets, reps, weight);
     }
 
     // Setters

@@ -1,4 +1,4 @@
-package com.backend.backend;
+package com.backend.backend.Datatypes;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -8,6 +8,7 @@ public class Progression {
     private HashMap<Date, Integer> sets;
     private HashMap<Date, Integer> reps;
     private HashMap<Date, Integer> weight;
+    private GymEquipment equipment;
 
     /** ****************************************************************
      *      DO NOT use/implement a constructor for this Object.
@@ -44,8 +45,12 @@ public class Progression {
         return this.weight.get(date);
     }
 
+    public GymEquipment getEquipment() {
+        return this.equipment;
+    }
+
     // Modifiers
-    public void addWorkout(Date date, Integer sets, Integer reps, Integer weight) {
+    public void addPerformance(Date date, Integer sets, Integer reps, Integer weight) {
         this.sets.put(date, sets);
         this.reps.put(date, reps);
         this.weight.put(date, weight);
@@ -62,5 +67,9 @@ public class Progression {
 
     public void setWeight(HashMap<Date, Integer> weightsFromDB) {
         this.weight = weightsFromDB;
+    }
+
+    public void setEquipment(GymEquipment equipment) {
+        this.equipment = equipment;
     }
 }

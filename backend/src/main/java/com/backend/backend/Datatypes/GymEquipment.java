@@ -1,4 +1,4 @@
-package com.backend.backend;
+package com.backend.backend.Datatypes;
 
 import java.util.HashMap;
 import java.util.HashSet;

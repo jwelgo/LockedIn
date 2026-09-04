@@ -1,4 +1,4 @@
-package com.backend.backend;
+package com.backend.backend.Datatypes;
 
 public enum GymMachineType {
     PUSH,

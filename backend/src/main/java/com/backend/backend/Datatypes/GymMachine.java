@@ -1,4 +1,4 @@
-package com.backend.backend;
+package com.backend.backend.Datatypes;
 
 public class GymMachine extends GymEquipment {
     private GymMachineType type;
