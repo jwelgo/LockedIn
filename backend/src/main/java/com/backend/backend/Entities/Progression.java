@@ -4,21 +4,31 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter
 @Entity
-@Table(name = "machines")
-public class Machine {
+@Table(name = "progression")
+public class Progression {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Setter
     @Column(nullable = false)
-    private String name;
+    private Date date;
 
     @Setter
-    @Column
-    private String settings;
+    @Column(nullable = false)
+    private Integer sets;
+
+    @Setter
+    @Column(nullable = false)
+    private Integer reps;
+
+    @Setter
+    @Column(nullable = false)
+    private Integer weight;
 
     @Setter
     @Version

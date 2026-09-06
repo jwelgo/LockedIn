@@ -18,10 +18,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest
 class MachineRepositoryTest {
-
     @Autowired
     private MachineRepository machineRepository;
-
+    
     private Machine machine;
 
     @BeforeEach

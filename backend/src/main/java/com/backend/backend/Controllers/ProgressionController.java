@@ -1,8 +1,8 @@
 package com.backend.backend.Controllers;
 
-import com.backend.backend.DTOs.MachineRequest;
-import com.backend.backend.DTOs.MachineResponse;
-import com.backend.backend.Services.MachineService;
+import com.backend.backend.DTOs.ProgressionRequest;
+import com.backend.backend.DTOs.ProgressionResponse;
+import com.backend.backend.Services.ProgressionService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,31 +11,31 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/machines")
-public class MachineController {
-    private final MachineService service;
+@RequestMapping("/api/progressions")
+public class ProgressionController {
+    private final ProgressionService service;
 
-    public MachineController(MachineService service) {
+    public ProgressionController(ProgressionService service) {
         this.service = service;
     }
 
     @PostMapping
-    public ResponseEntity<MachineResponse> create(@Valid @RequestBody MachineRequest req) {
+    public ResponseEntity<ProgressionResponse> create(@Valid @RequestBody ProgressionRequest req) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(req));
     }
 
     @GetMapping("/{id}")
-    public MachineResponse get(@PathVariable Long id) {
+    public ProgressionResponse get(@PathVariable Long id) {
         return service.getById(id);
     }
 
     @GetMapping
-    public Page<MachineResponse> list(Pageable pageable) {
-        return service.list(pageable); 
+    public Page<ProgressionResponse> list(Pageable pageable) {
+        return service.list(pageable);
     }
 
     @PutMapping("/{id}")
-    public MachineResponse update(@PathVariable Long id, @Valid @RequestBody MachineRequest req) {
+    public ProgressionResponse update(@PathVariable Long id, @Valid @RequestBody ProgressionRequest req) {
         return service.update(id, req);
     }
 
